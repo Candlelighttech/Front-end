@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Candlelight Color System - Dark Futuristic Theme */
+    --base-dark: 229 61% 9%;        /* #070F2B */
+    --secondary-dark: 241 57% 22%;  /* #1B1A55 */
+    --primary-accent: 232 27% 56%;  /* #535C91 */
+    --light-accent: 242 20% 67%;    /* #9290C3 */
+
+    --background: 229 61% 9%;
+    --foreground: 242 20% 67%;
+
+    --card: 241 57% 22%;
+    --card-foreground: 242 20% 67%;
+
+    --popover: 241 57% 22%;
+    --popover-foreground: 242 20% 67%;
+
+    --primary: 232 27% 56%;
+    --primary-foreground: 229 61% 9%;
+
+    --secondary: 241 57% 22%;
+    --secondary-foreground: 242 20% 67%;
+
+    --muted: 241 57% 22%;
+    --muted-foreground: 242 15% 55%;
+
+    --accent: 232 27% 56%;
+    --accent-foreground: 229 61% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 242 20% 67%;
+
+    --border: 232 27% 40%;
+    --input: 241 57% 22%;
+    --ring: 232 27% 56%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(232 27% 56%), hsl(242 20% 67%));
+    --gradient-hero: linear-gradient(180deg, hsl(229 61% 9%) 0%, hsl(241 57% 22%) 100%);
+    
+    /* Shadows & Effects */
+    --glow-primary: 0 0 20px hsl(232 27% 56% / 0.5);
+    --glow-accent: 0 0 30px hsl(242 20% 67% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Make all paragraph text default to Tailwind gray-400 across pages */
+  p {
+    @apply text-gray-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-accent to-light-accent bg-clip-text text-transparent;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px hsl(232 27% 56% / 0.3);
+    }
+    to {
+      box-shadow: 0 0 20px hsl(232 27% 56% / 0.8), 0 0 30px hsl(242 20% 67% / 0.4);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 35s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out 0.5s both;
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-gradient {
+    animation: ai-advanced 8s ease-in-out infinite, shimmer 4s ease-in-out infinite, wave-effect 6s ease-in-out infinite, blink-effect 3s ease-in-out infinite;
+    background-size: 400% 100%;
+    position: relative;
+  }
+
+  @keyframes ai-advanced {
+    0% {
+      background-position: 0% 50%;
+      transform: scale(1) rotate(0deg) skew(0deg);
+      filter: hue-rotate(0deg) saturate(1);
+    }
+    15% {
+      background-position: 100% 50%;
+      transform: scale(1.02) rotate(0.3deg) skew(0.5deg);
+      filter: hue-rotate(5deg) saturate(1.1);
+    }
+    25% {
+      background-position: 200% 50%;
+      transform: scale(1.04) rotate(0.6deg) skew(0deg);
+      filter: hue-rotate(10deg) saturate(1.2);
+    }
+    35% {
+      background-position: 300% 50%;
+      transform: scale(1.06) rotate(0.3deg) skew(-0.5deg);
+      filter: hue-rotate(15deg) saturate(1.3);
+    }
+    50% {
+      background-position: 400% 50%;
+      transform: scale(1.08) rotate(0deg) skew(0deg);
+      filter: hue-rotate(20deg) saturate(1.4);
+    }
+    65% {
+      background-position: 300% 50%;
+      transform: scale(1.06) rotate(-0.3deg) skew(0.5deg);
+      filter: hue-rotate(15deg) saturate(1.3);
+    }
+    75% {
+      background-position: 200% 50%;
+      transform: scale(1.04) rotate(-0.6deg) skew(0deg);
+      filter: hue-rotate(10deg) saturate(1.2);
+    }
+    85% {
+      background-position: 100% 50%;
+      transform: scale(1.02) rotate(-0.3deg) skew(-0.5deg);
+      filter: hue-rotate(5deg) saturate(1.1);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: scale(1) rotate(0deg) skew(0deg);
+      filter: hue-rotate(0deg) saturate(1);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -300% 0;
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      background-position: 300% 0;
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes wave-effect {
+    0%, 100% {
+      transform: translateY(0) scaleY(1);
+    }
+    25% {
+      transform: translateY(-2px) scaleY(1.02);
+    }
+    75% {
+      transform: translateY(2px) scaleY(0.98);
+    }
+  }
+
+  @keyframes blink-effect {
+    0%, 90%, 100% {
+      opacity: 1;
+      transform: scale(1);
+      text-shadow: 0 0 0px transparent;
+    }
+    95% {
+      opacity: 0.3;
+      transform: scale(1.1);
+      text-shadow: 0 0 10px hsl(232 27% 56% / 0.5);
+    }
+  }
+}
