@@ -1,156 +1,220 @@
-<div align="center">
+# ⚡ Candlelight – Modern SaaS Frontend
 
-# 🚀 CandlelightTechnology.com Dashboard  
-
-### 🌟 AI-Powered Website Builder & Content Management Platform
-
-A **next-generation React + Tailwind CSS dashboard** designed for **AI-driven website creation, SEO analytics, and team collaboration** — built for **CandlelightTechnology.com**.
-
-</div>
-
-## 🧠 Overview
-
-**CandlelightTechnology.com Dashboard** is a futuristic, AI-first platform for building and managing websites with ease.  
-It includes everything from **AI-powered website generation** to **SEO analytics**, **team collaboration**, and **automated deployment** — all in one unified dashboard.
-
-> ⚡ Designed with **React.js + Tailwind CSS**, built for scalability, performance, and beautiful user experience.
+A **futuristic, production-ready React + Tailwind CSS** frontend for **Candlelight**, an online web tools platform designed to deliver a sleek, accessible, and animated user experience.  
+Built with **modern UI/UX principles**, GSAP animations, responsive layouts, and WCAG AA accessibility standards.
 
 ---
 
-## ✨ Features
+## 🚀 Tech Stack
 
-### 🔐 Authentication System
-- Login, Signup, and Logout with validation  
-- Demo account for full access  
-- Responsive design with neon-glow UI  
-- Confirmation modals & toast notifications  
-
-### 🧭 Dashboard Layout
-- Collapsible Sidebar with active states  
-- Header with search, notifications, and user dropdown  
-- Animated transitions and responsive menu  
-
-### 🧩 10 Fully Functional Dashboard Sections
-| Section | Description |
-|----------|-------------|
-| **1. Dashboard Overview** | Real-time stats, activity feed, performance charts |
-| **2. Projects** | Create, duplicate, delete projects with version history |
-| **3. AI Website Builder** | Drag-and-drop builder, AI content generation |
-| **4. AI Assistant** | Chat-based AI tools for SEO and copywriting |
-| **5. Blog & Content Manager** | Rich text editor, post scheduling, SEO metadata |
-| **6. Export & Deployment** | Deploy via GitHub, Netlify, Vercel |
-| **7. SEO & Analytics** | Traffic graphs, keyword tracking, AI insights |
-| **8. Settings** | Profile, dark/light mode, preferences |
-| **9. Subscription & Billing** | Plans, invoices, payment methods |
-| **10. Team & Collaboration** | Invite members, assign roles, activity logs |
-
----
-
-## 🧪 Demo Account
-
-**Credentials:**
-Email: demo@candlelighttech.com
-Password: Demo@1234
-
-markdown
-Copy code
-
-✅ Includes:
-- 5 sample projects  
-- 2 blog posts (draft + published)  
-- 3 team members with roles  
-- Analytics data with charts  
-- SEO recommendations  
-- Usage and billing stats  
-
-> No signup required — all demo data is stored locally via `localStorage`.
-
----
-
-## 🧰 Tech Stack
-
-| Category | Tools Used |
-|-----------|------------|
-| **Frontend** | React.js + Vite |
-| **Styling** | Tailwind CSS |
-| **State Management** | Context API |
-| **Routing** | React Router v6 |
-| **Charts** | Recharts |
-| **Rich Editor** | React Quill |
-| **Animations** | Framer Motion |
-| **Drag & Drop** | react-dnd |
-| **Icons** | Heroicons / React Icons |
-| **Validation** | React Hook Form |
-| **Persistence** | LocalStorage |
-| **Notifications** | Custom Toast System |
+- ⚛️ **React 18+** (Functional components + Hooks)
+- 🎨 **Tailwind CSS v3.4.17**
+- ✨ **GSAP + ScrollTrigger** (for animations)
+- 🧩 **React Router DOM**
+- 📦 **Vite** (build tool)
+- 🌀 **Three.js** (optional dynamic backgrounds)
+- 🧠 **Lazy Loading** for performance
+- ♿ **WCAG AA Accessibility Compliant**
 
 ---
 
 ## 🎨 Design System
 
-**Color Palette**
-| Role | Color |
-|------|--------|
-| Dark Base | `#070F2B` |
-| Primary | `#1B1A55` |
-| Accent | `#535C91` |
-| Highlight | `#9290C3` |
+### 🎨 Color Palette
+| Name | Hex | Usage |
+|------|-----|--------|
+| Base Dark | `#222831` | Primary background |
+| Secondary | `#393E46` | Cards & surfaces |
+| Accent | `#FFD369` | CTA, buttons, highlights |
+| Text Light | `#EEEEEE` | Headings & body text |
 
-**Typography**
-- Headings → Orbitron  
-- Body Text → Inter  
-
-**Visual Style**
-- Glassmorphism + Neon Glow  
-- Soft gradients and glows  
-- Rounded corners (`1rem – 1.5rem`)  
-- Particle or line-flow animated background  
+### ✍️ Typography
+- **Headings / Logo:** `Orbitron`
+- **Body / UI Text:** `Roboto`
 
 ---
 
-## 📁 Folder Structure
+## 📱 Responsive Design
 
-candlelight-dashboard/
-│
-├── public/
-│ ├── index.html
-│ └── favicon.ico
-│
-├── src/
-│ ├── assets/ # Icons, images, mock data
-│ ├── components/ # Reusable components (Button, Modal, Card, etc.)
-│ ├── contexts/ # Context API (Auth, Theme, Data)
-│ ├── hooks/ # Custom hooks
-│ ├── layouts/ # AuthLayout, DashboardLayout
-│ ├── pages/ # All 10 functional sections
-│ ├── routes/ # Protected and public routes
-│ ├── utils/ # Helpers, constants
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-│
-├── tailwind.config.js
-├── postcss.config.js
-├── package.json
-└── README.md
+Built mobile-first using Tailwind’s breakpoints:
 
-yaml
-Copy code
+| Device | Prefix | Width |
+|---------|---------|--------|
+| Small | `sm:` | ≥ 640px |
+| Medium | `md:` | ≥ 768px |
+| Large | `lg:` | ≥ 1024px |
+| Extra Large | `xl:` | ≥ 1280px |
+| 2X Large | `2xl:` | ≥ 1536px |
 
 ---
 
-## ⚙️ Installation & Setup
+## ✨ Animation System (GSAP ScrollTrigger)
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/Gajan-kaja/candlelight-dashboard.git
-cd candlelight-dashboard
-2️⃣ Install Dependencies
-bash
-Copy code
-npm install
-3️⃣ Start the Development Server
-bash
-Copy code
-npm run dev
-App runs at http://localhost:5173
+| Property | Value |
+|-----------|--------|
+| Start | `"top 80%"` |
+| Stagger Delay | `0.1s–0.2s` |
+| Duration | `0.6s–1.2s` |
+| Easing | `power2.out`, `power3.out` |
+| Types | fade-in, slide-up, slide-left, slide-right, scale-up, stagger |
+| Hero | fade-in with slide-up subtitle |
+| Cards | staggered fade-up & scale |
+| Counters | animate from 0 to target |
+| Testimonials | slide-up fade transitions |
+
+All ScrollTrigger instances are cleaned up on component unmount to prevent memory leaks.
+
+---
+
+## 🧱 Component System
+
+### 🔹 Reusable Components
+| Component | Description |
+|------------|-------------|
+| `AnimatedHeading` | Scroll-triggered heading animation |
+| `Button` | Gradient button with hover scale |
+| `Card` | Base card with dark background |
+| `AnimatedCard` | Scroll-triggered card animation |
+| `Timeline` | Vertical/horizontal milestone display |
+| `Accordion` | Expandable FAQ sections |
+| `Slider` | Carousel for testimonials/posts |
+| `InputField` | Validated text input |
+| `Textarea` | Styled multi-line input |
+| `MapContainer` | Embedded map component |
+
+---
+
+## 🧭 Layout Components
+
+### Header
+- Three-tier structure: **mini-bar**, **main nav**, **scroll indicator**
+- Sticky + semi-transparent on scroll
+- Logo gradient: `from-[#FFD369] to-[#EEEEEE]`
+- CTA button:  
+  ```html
+  class="bg-gradient-to-r from-[#FFD369] to-[#FFD369] hover:scale-105 transition"
+Footer
+Angled top border using clip-path
+
+Four-column layout (responsive → 2 cols tablet, 1 col mobile)
+
+Newsletter form with gradient button
+
+Neon glow social icons: hover text-[#FFD369] drop-shadow-[0_0_10px_#FFD369]
+
+🗂️ Page Structure
+Each page contains exactly 7 sections for consistent flow:
+
+🏠 Home
+Hero
+
+Tool Categories
+
+How It Works
+
+Featured Tools
+
+Testimonials
+
+Pricing Preview
+
+Footer CTA
+
+👥 About
+Hero
+
+Story & Mission
+
+Vision & Values
+
+Team
+
+Milestones Timeline
+
+Testimonials
+
+Footer CTA
+
+⚙️ Features
+Hero
+
+Tool Categories
+
+Feature Details
+
+Comparison Table
+
+Interactive Demo
+
+Testimonials
+
+Footer CTA
+
+💰 Pricing
+Hero
+
+Plans (3 tiers)
+
+Comparison Table
+
+Benefits
+
+Testimonials
+
+FAQ Accordion
+
+Footer CTA
+
+📰 Blog
+Hero + Search
+
+Latest Posts Grid
+
+Popular Posts Slider
+
+Categories/Tags Filter
+
+Author Spotlight
+
+Newsletter CTA
+
+Footer
+
+📞 Contact
+Hero
+
+Contact Form
+
+Support Info Cards
+
+Map Display
+
+FAQ Accordion
+
+Testimonials
+
+Footer CTA
+
+⚡ Performance
+React.lazy() for all page components
+
+Lazy load Three.js only when needed
+
+Optimized assets & images
+
+Cleanup of all GSAP triggers on unmount
+
+Minimized bundle size
+
+♿ Accessibility
+WCAG AA compliance
+
+ARIA labels on all interactive elements
+
+Full keyboard navigation
+
+prefers-reduced-motion respected
+
+Focus indicators for inputs & buttons
+
+High color contrast ratios
